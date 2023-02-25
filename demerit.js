@@ -1,4 +1,3 @@
-
 function Demerit(speed){
     const speedLimit = 70;
     const increase_points = 5

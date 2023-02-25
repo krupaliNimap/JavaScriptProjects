@@ -1,5 +1,5 @@
 function isLandscape(width, height){
-    return width > height
+    return width > height;
 }
 
-console.log(isLandscape(900,110))
+console.log(isLandscape(900,110));
