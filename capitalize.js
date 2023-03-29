@@ -1,4 +1,5 @@
 let a = 'my-name-is-krupali'
+//First method
 b = a.replaceAll("-"," ")
 var c = []
 for( let i = 0; i < a.length; i++){
@@ -6,12 +7,24 @@ for( let i = 0; i < a.length; i++){
 }
 var d = c[0].toUpperCase()
 for(let i in c){
-    console.log(c[i])
-    if (c[i] == ' '){
-        z = c[i+1].toUpperCase()
-        d = d + ' ' + z
-        console.log(9)
+    if (i === '0'){
+        continue
+    }
+    if(c[i-1] == " "){
+        e = c[i].toUpperCase()
+        d = d + e
     }
     else d = d + c[i]
 }
 console.log(d)
+
+//second method using spread operator
+let l = a.replaceAll('-', ' ');
+let m = l.split(" ")
+let o = []
+function abc(r){
+    let q = r.replace(r[0],r[0].toUpperCase())
+    o.push(q)
+}
+let n = m.map(abc)
+console.log(o.join(" "))
