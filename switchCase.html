@@ -1,0 +1,53 @@
+<!-- Monday and Thursday => Work from office
+Tuesday Wednesday and Friday => Work from home
+Saturday Sunday => Chutti -->
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="input" id="demo"/>
+    <script>
+        const hybrid = () =>{
+        const day = document.getElementById('demo').value
+        switch(day){
+            case "Monday":
+            case "Thursday":
+                text = "Work from office"
+                break;
+            case "Tuesday":
+            case "Wednesday":
+            case "Friday":
+                text = "Work from home"
+                break;
+            // case "Wednesday":
+            //     text = "Work from home"
+            //     break;
+            // case "Thursday":
+            //     text = "Work from office"
+                
+            // case "Thursday":
+            //     text = "Work from home"
+            //     break
+            case "Saturday":
+            case "Sunday":
+                text = "chutti"
+                break
+            // case "Sunday":
+            //     text = "chutti"
+            //     break
+            default:
+                text = "Input is wrong"
+        }
+        document.getElementById("name").innerHTML = text
+        // console.log(text)
+    }
+    </script>
+    <button type="button" onclick="hybrid()">Check</button>
+    <h1 id="name"></h1>
+</body>
+</html>
